@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-redux": "^5.0.13",
     "antd": "^2.13.8",
     "autoprefixer": "7.1.2",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
@@ -21,6 +22,8 @@
     "react": "^16.0.0",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "source-map-loader": "^0.2.1",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",

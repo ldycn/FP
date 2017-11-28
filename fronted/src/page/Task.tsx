@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import { Row , Table } from 'antd';
+import { connect } from 'react-redux'
 import { TableColumnConfig } from 'antd/lib/table/Table';
 import Modal from '../component/task/Modal';
 import DetailForm from '../component/task/DetailForm';
+import SplitLine from '../component/task/SplitLine';
+import AuditInformation from '../component/task/AuditInformation';
 import '../antd.css';
 
 interface IUser {
@@ -133,7 +136,7 @@ class UserTable extends Table<IUser> {}
 // 使用 JSX 风格的 API
 class NameColumn extends Table.Column<IUser> {}
 
-class Task extends Component { // TODO 现不用Component
+class Task extends Component<any> { // TODO 现不用Component
   onCellClick = (e: any) => {
     console.log(e);
   }
@@ -170,7 +173,12 @@ class Task extends Component { // TODO 现不用Component
     return (
       <Row style={{ margin: '32px' }}>
         <Modal>
+          <SplitLine name="任务信息"/>
           <DetailForm />
+          <SplitLine name="审核记录"/>
+          <AuditInformation type="normal"/>
+          <AuditInformation type="normal"/>
+          <AuditInformation type="back" />
         </Modal>
         <UserTable dataSource={data}>
         {this.makeColumn(columns)}
@@ -180,4 +188,8 @@ class Task extends Component { // TODO 现不用Component
   }
 }
 
-export default Task;
+const state = (state: any) => {
+  console.log(state);
+  return { a: 'asfa' };
+}
+export default connect(state)(Task);

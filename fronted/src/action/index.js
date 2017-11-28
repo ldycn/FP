@@ -1,3 +1,7 @@
+function namedAction(action) {
+  eval(`export const ${action} = action`)
+  eval(`export type ${action} = action`)
+}
 // Task
 
   // search
@@ -17,6 +21,7 @@ export const TA_MODAL_ONNOTKEEP = 'TA_MODAL_ONNOTKEEP';
 export const TA_MODAL_ONKEEP = 'TA_MODAL_ONKEEP';
 
   // task
+export const TP_INIT = 'TP_INIT';
 export const TA_TAB_ONCLICK = 'TA_TAB_ONCLICK';
 export const TA_ADVANCED_SEARCH_ONCLICK = 'TA_ADVANCED_SEARCH_ONCLICK';
 export const TA_TASK_SORT_TIME_FORWARD = 'TA_TASK_SORT_TIME_FORWARD';

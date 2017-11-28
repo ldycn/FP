@@ -1,11 +1,13 @@
 import * as React from 'react';
+import { Provider } from 'react-redux'
 import Page from './page';
+import store from './store';
 
 function App() {
   return (
-    <div>
-    <Page />
-    </div>
+    <Provider store={store}>
+      <Page />
+    </Provider>
   );
 }
 
