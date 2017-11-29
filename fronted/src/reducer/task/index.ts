@@ -6,7 +6,7 @@ import {
   TA_MODAL_ONNOTKEEP,
   TA_MODAL_ONKEEP,
   TA_TAB_ONCLICK,
-  TA_ADVANCED_SEARCH_ONCLICK,
+  // TA_ADVANCED_SEARCH_ONCLICK,
   TA_TASK_SORT_TIME_FORWARD,
   TA_TASK_SORT_TIME_BACKWARD,
   TA_CHANGE_PAGE,
@@ -22,9 +22,6 @@ import {
   TP_INIT,
 } from '../../action'
 
-interface modal {
-  visible: boolean,
-}
 function modal(state = { visible: false },action: any) {
   switch (action.type) {
     case TA_TASK_ONCLICK:

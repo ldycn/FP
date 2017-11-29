@@ -109,38 +109,38 @@ interface notKeepTask { // TODO v0.1接口继承
   }
 }
 
-function modalConfirm(id: string, auditContents: string): notKeepTask { // TODO v0.1自己封装middleWare处理同步链接state发送dispatch
-  return {
-    type: 'TA_MODAL_ONNOTKEEP',
-    payload: {
-      task: {
-        id,
-        state: 'notKeep',
-        auditContents,
-      },
-      users: state.users.map((v) => ({ // TODO v0.1命名空间，只定义一次interface
-        id: v.id,
-        position: v.position,
-        bonusLevel: v.bonusLevel,
-      })),
-    }
-  }
-}
-
-function TA_MODAL_ONKEEP(id: string, auditContents: string): notKeepTask {
-  return {
-    type: 'TA_MODAL_ONKEEP',
-    payload: {
-      task: {
-        id,
-        state: 'keep',
-        auditContents,
-      },
-      users: state.users.map((v) => ({ // TODO v0.1命名空间，只定义一次interface
-        id: v.id,
-        position: v.position,
-        bonusLevel: v.bonusLevel,
-      })),
-    }
-  }
-}
+// function modalConfirm(id: string, auditContents: string): notKeepTask { // TODO v0.1自己封装middleWare处理同步链接state发送dispatch
+//   return {
+//     type: 'TA_MODAL_ONNOTKEEP',
+//     payload: {
+//       task: {
+//         id,
+//         state: 'notKeep',
+//         auditContents,
+//       },
+//       users: state.users.map((v) => ({ // TODO v0.1命名空间，只定义一次interface
+//         id: v.id,
+//         position: v.position,
+//         bonusLevel: v.bonusLevel,
+//       })),
+//     }
+//   }
+// }
+//
+// function TA_MODAL_ONKEEP(id: string, auditContents: string): notKeepTask {
+//   return {
+//     type: 'TA_MODAL_ONKEEP',
+//     payload: {
+//       task: {
+//         id,
+//         state: 'keep',
+//         auditContents,
+//       },
+//       users: state.users.map((v) => ({
+//         id: v.id,
+//         position: v.position,
+//         bonusLevel: v.bonusLevel,
+//       })),
+//     }
+//   }
+// }

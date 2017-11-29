@@ -1,7 +1,7 @@
-function namedAction(action) {
-  eval(`export const ${action} = action`)
-  eval(`export type ${action} = action`)
-}
+// function namedAction(action: any) {
+//   eval(`export const ${action} = action`)
+//   eval(`export type ${action} = action`)
+// }
 // Task
 
   // search

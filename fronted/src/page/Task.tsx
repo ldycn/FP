@@ -170,6 +170,13 @@ class Task extends Component<any> { // TODO 现不用Component
   }
 
   render() {
+    function getProperty(obj: T, key: K) {
+      return obj[key];
+  }
+
+  let x = { a: 1, b: 2, c: 3, d: 4 };
+
+  getProperty(x, "a"); // okay
     return (
       <Row style={{ margin: '32px' }}>
         <Modal>
